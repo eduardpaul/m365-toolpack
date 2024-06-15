@@ -30,6 +30,9 @@ Pin-Priority: -10\'
 RUN pwsh -c Install-Module -Name Microsoft.Graph -Scope AllUsers -Repository PSGallery -Force
 RUN pwsh -c Install-Module -Name Az -Scope AllUsers -Repository PSGallery -Force
 RUN pwsh -c Install-Module -Name PnP.PowerShell -Scope AllUsers -Repository PSGallery -Force
+RUN pwsh -c Install-Module -Name MicrosoftTeams -Scope AllUsers -Repository PSGallery -Force
+RUN pwsh -c Install-Module -Name ExchangeOnlineManagement -Scope AllUsers -Repository PSGallery -Force
+
 
 RUN curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin -c 6.0 --install-dir ${DOTNET_ROOT}
 RUN curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin -c 7.0 --install-dir ${DOTNET_ROOT}
